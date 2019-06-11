@@ -26,7 +26,9 @@ phases:
       #- sudo apt-get -y install libxpm4 libxrender1 libgtk2.0-0 libnss3 libgconf-2-4
       - echo # Install Robot Framework and SeleniumLibrary robotframework-requests
       - pip install robotframework
-      - pip install robotframework-seleniumlibrary==3.3.1
+      #- pip install robotframework-seleniumlibrary==3.3.1
+      - pip install robotframework-selenium2library==3.0.0
+      - pip install Pillow==4.2.1
       - pip install robotframework-requests==0.5.0
       - pip install urllib3==1.24.1
       - pip list
@@ -38,7 +40,7 @@ phases:
       - echo ==========  build phase...  ====================
       - echo Build started on `date`
       - echo # Test execution: use -d -i options
-      - robot --outputdir reports uitest.robot result_handling.robot
+      - robot --outputdir reports login/login.robot
   post_build:
     commands:
       - echo ==========  post-build phase...  ====================
