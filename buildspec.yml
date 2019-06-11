@@ -7,7 +7,7 @@ phases:
       - python --version
       - pip install --upgrade pip
       - apt-get update
-      - sudo pip install pyvirtualdisplay
+      - pip install pyvirtualdisplay
       - echo # Chrome Repo
       - sudo apt-get -y install fonts-liberation xdg-utils libxss1 libappindicator1 libindicator7 gconf-service libasound2-dev libgconf-2-4 libnspr4 libx11-xcb1 libnss3 xdg-utils
       - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
