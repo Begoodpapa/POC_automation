@@ -6,19 +6,19 @@ phases:
       - echo ==========  install phase...  ====================
       - python --version
       - pip install --upgrade pip
-      - apt-get update
-      - pip install pyvirtualdisplay
-      - echo # Chrome Repo
-      - apt-get -y install fonts-liberation xdg-utils libxss1 libappindicator1 libindicator7 gconf-service libasound2-dev libgconf-2-4 libnspr4 libx11-xcb1 libnss3 xdg-utils
-      - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-      - dpkg -i google-chrome*.deb
-      - apt-get update
-      - echo # Download
-      - apt-get -y install curl
-      - CHROME_DRIVER_VERSION=`curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE`
-      - get https://chromedriver.storage.googleapis.com/75.0.3770.8/chromedriver_linux64.zip
-      - echo # Extract
-      - unzip chromedriver_linux64.zip
+     # - apt-get update
+     # - pip install pyvirtualdisplay
+     # - echo # Chrome Repo
+     # - apt-get -y install fonts-liberation xdg-utils libxss1 libappindicator1 libindicator7 gconf-service libasound2-dev libgconf-2-4 libnspr4 libx11-xcb1 libnss3 xdg-utils
+     # - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+     # - dpkg -i google-chrome*.deb
+     # - apt-get update
+     # - echo # Download
+     # - apt-get -y install curl
+     # - CHROME_DRIVER_VERSION=`curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE`
+     # - get https://chromedriver.storage.googleapis.com/75.0.3770.8/chromedriver_linux64.zip
+     #- echo # Extract
+     # - unzip chromedriver_linux64.zip
       - echo # Deploy + Permissions
       - cp ./chromedriver /usr/bin/
       - chmod ugo+rx /usr/bin/chromedriver
