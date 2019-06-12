@@ -19,11 +19,11 @@ phases:
      # - get https://chromedriver.storage.googleapis.com/75.0.3770.8/chromedriver_linux64.zip
      #- echo # Extract
      # - unzip chromedriver_linux64.zip
-      - echo # Deploy + Permissions
-      - cp ./chromedriver /usr/bin/
-      - chmod ugo+rx /usr/bin/chromedriver
-      - echo # Install Google Chrome
-      - apt-get -y install libxpm4 libxrender1 libgtk2.0-0 libnss3 libgconf-2-4
+     # - echo # Deploy + Permissions
+     # - cp ./chromedriver /usr/bin/
+     # - chmod ugo+rx /usr/bin/chromedriver
+     # - echo # Install Google Chrome
+     # - apt-get -y install libxpm4 libxrender1 libgtk2.0-0 libnss3 libgconf-2-4
       - echo # Install Robot Framework and SeleniumLibrary robotframework-requests
       - pip install robotframework
       #- pip install robotframework-seleniumlibrary==3.3.1
