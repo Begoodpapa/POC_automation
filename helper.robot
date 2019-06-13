@@ -69,3 +69,7 @@ Click Element And Wait For Another Element
     Wait Until Keyword Succeeds    ${timeout}    ${polltime}    Wait Until Element Is Visible    ${element1}
     Click Element    ${element1}
     Wait Until Keyword Succeeds    ${timeout}    ${polltime}    Wait Until Element Is Visible    ${element2}
+
+Mark LambdaTest Status
+   Run keyword if    ${TEST STATUS}==PASS    Execute Javascript    lambda-status=true
+   Run keyword if    ${TEST STATUS}==FAIL    Execute Javascript    lambda-status=false

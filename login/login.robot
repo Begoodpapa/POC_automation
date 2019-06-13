@@ -3,6 +3,7 @@ Suite Setup       Open browser and maximize
 Suite Teardown  run keywords
 ...             Close Browser
 Test Teardown     Logout if possible
+...               Mark LambdaTest status
 Resource          ../steps.robot
 Library           ../util.py
 
@@ -46,22 +47,17 @@ user should be able to log out succesfully
 #-------------------------------------------------------------------------------------
 open navigation login panel
     click element and wait for another element    ${navloginpanel_navlogin}    ${navloginpanel_signup}
-    Run Keyword If ${TEST STATUS}==PASS, Execute Javascript, lambda-status=false
 
 input a valid email address
     input text    ${navloginpanel_email}    yellow.business.owner@gmail.com
-    Run Keyword If ${TEST STATUS}==PASS, Execute Javascript, lambda-status=false
 
 input a valid password
     input password    ${navloginpanel_password}    1234567
-     Run Keyword If ${TEST STATUS}==PASS, Execute Javascript, lambda-status=false
 
 click 'Login'
     click element and wait for another element    ${navloginpanel_login}    ${my_navlogin_loggedinusername}
-     Run Keyword If ${TEST STATUS}==PASS, Execute Javascript, lambda-status=false
 
 open navigation login panel and click 'Sign out'
     click element and wait for another element    ${my_navlogin_dropdown_arrow}    ${my_navloginpanel_signout}
     click element    ${my_navloginpanel_signout}
-    Run Keyword If ${TEST STATUS}==PASS, Execute Javascript, lambda-status=false
 
