@@ -2,10 +2,11 @@
 Suite Setup       Open browser and maximize
 Suite Teardown  run keywords
 ...             Close Browser
-Test Teardown     User should be able to log out succesfully
-...               Mark LambdaTest status
-Resource          ../steps.robot
-Library           ../util.py
+Test Teardown    run keywords
+...              User should be able to log out succesfully
+...              AND    Mark LambdaTest status
+Resource         ../steps.robot
+Library          ../util.py
 
 *** Test Cases ***
 Log in using valid user account, then log out
