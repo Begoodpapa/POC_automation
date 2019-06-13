@@ -2,7 +2,7 @@
 Suite Setup       Open browser and maximize
 Suite Teardown  run keywords
 ...             Close Browser
-Test Teardown     Logout if possible
+Test Teardown     User should be able to log out succesfully
 ...               Mark LambdaTest status
 Resource          ../steps.robot
 Library           ../util.py
@@ -13,7 +13,7 @@ Log in using valid user account, then log out
     When user logs in using valid email address and password
     Then login should be successful
     #And notification displayed is "Thanks Roxanne, you are now logged in."
-    [Teardown]  User should be able to log out succesfully
+#    [Teardown]  User should be able to log out succesfully
 
 
 *** Keywords ***
